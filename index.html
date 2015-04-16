@@ -1,0 +1,441 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>reveal.js - The HTML Presentation Framework</title>
+
+		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+		<meta name="author" content="Hakim El Hattab">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css" id="theme">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+
+		<style>
+		.important, imp {
+			color: #7777FF; font-weight: bold;
+		}
+		.highlight {
+			background-color: yellow;
+			color: black;
+		}
+		.bigger {
+			font-size: 130%;
+		}
+		.pointer {
+			cursor: pointer;
+		}
+		tt {
+			font-family: monospace !important;
+			font-size: 4px;
+			color: #BBBBBB;
+		}
+		img {
+			border: 3px solid #888888 !important;
+		}
+		div.block {
+			display: inline-block;
+			vertical-align:top;
+			width: 30%;
+		}
+		div.block>h1 {
+			text-transform: none;
+			width: 100%; border-bottom: 1px solid #7777AA;
+			font-weight:bold;
+			color: black; background-color: #666699;
+			font-size: 1em;
+			margin: 0 0 8px 0;
+		}
+		</style>
+
+		<script src="js/jquery-2.1.3.min.js"></script>
+
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<h1>Javascript &amp; jQuery</h1>
+					<h3>Initiation</h3>
+					<p>
+						<a href="http://www.twitter.com/paloaltours">@paloaltours</a>
+					</p>
+				</section>
+
+				<section>
+					<h2>Notre objectif</h2>
+					<h3>durant cette présentation</h3>
+					<p>
+						Faire ensemble vos premiers pas pour ajouter un comportement dynamique
+						à vos pages web
+					</p>
+				</section>
+
+				<section>
+					<section>
+						<h2>Rappel</h2>
+						<ul>
+							<li>
+								HTML: <span class="important">décrit</span> le contenu d'une page web
+							</li>
+							<li>
+								CSS: <span class="important">décrit</span> la présentation du html
+							</li>
+							<li>
+								Javascript: <span class="important">exécute</span> un comportement dynamique
+							</li>
+						</ul>
+					</section>
+
+					<section>
+						<h2>Rappel: HTML et le DOM</h2>
+
+						<pre><code class="html" data-trim contenteditable style="font-size: 18px;">
+<h2>Lorem ipsum</h2>
+<div class="section">
+	<div id="topic">Mauris id dictum lorem...</div>
+	<ul>
+		<li> In vehicula nec massa non dictum.</li>
+		<li>
+			Nullam
+			<span class="important">malesuada</span>
+			augue dictum tincidunt viverra
+		</li>
+	</ul>
+</div>
+</code></pre>
+					</section>
+
+					<section>
+						<div style="">
+								<pre style="border: 3px solid red; max-width: 60%; position: absolute; transform: scale(0.7); transform-origin: 140% 0; top: 0; right: 0; margin:0; padding: 0;"><code class="html" data-trim contenteditable style="font-size: 18px; overflow: hidden;">
+&lt;html>
+&lt;header>&lt;/header>
+&lt;body>
+<h2>Lorem ipsum</h2>
+<div class="section">
+	<div id="topic">Mauris id dictum lorem...</div>
+	<ul>
+		<li> In vehicula nec massa non dictum.</li>
+		<li>
+			Nullam
+			&lt;span class="important">malesuada</span>
+			augue dictum tincidunt viverra
+		</li>
+	</ul>
+</div>
+&lt;body>
+&lt;/html>
+		</code></pre>
+							<img style="background-color: #E0E0E0; border: 5px solid #AAAAAA; padding: 8px;" src="images/arborescence_html.svg">
+						</div>
+					</section>
+
+
+					<section>
+						<h2>Le DOM et jQuery</h2>
+						<div>Les nombreux problèmes historiques du DOM</div>
+						<ul>
+							<li>Difficile et compliqué à utiliser</li>
+							<li>Des différences importantes entre navigateurs (plus maintenant)</li>
+						</ul>
+						<p>
+							jQuery a emergé en 2005/2006 en simplifiant l'accès et la manipulation du contenu html
+						</p>
+						<p>
+							<img src="images/jquery-history.png">
+						</p>
+					</section>
+
+				</section>
+
+				<!-- Example of nested vertical slides -->
+				<section>
+					<section>
+						<h2>Javascript</h2>
+						<p>
+							Quelques fondamentaux
+						</p>
+					</section>
+					<section>
+						<h2>Javascript: les variables</h2>
+						<pre><code class="javascript" data-trim contenteditable style="font-size: 18px;">
+var x = 23;     // x=23
+var y = x * 10; // y=230
+var user = "Kevin Dupont";
+</code></pre>
+La variable est un espace de stockage pouvant contenir des nombres, des chaines de caractère (string), des objets, etc
+<pre><code class="javascript" data-trim contenteditable style="font-size: 18px;">
+// D'abord: on déclare une variable
+var y;
+// On peut lui donner une valeur dès la déclaration
+var y = 23;
+// Ensuite: on l'utilise
+y = 0;
+y = y + 100;
+</code></pre>
+
+					</section>
+					<section>
+						<h2>Javascript: les fonctions</h2>
+						<p>Les fonctions sont un groupement de commandes</p>
+						<pre><code class="javascript" data-trim contenteditable style="font-size: 18px;">
+// vide
+function() {
+}
+// renvoie une valeur
+function() {
+  var x = 12;
+  return x * 10;
+}
+// Prend un ou plusieurs paramètres
+function(x) {
+  return x * 3.14159;
+}
+// Peut avoir un  nom
+function cmToInches(cm) {
+  return cm * 0.393700787;
+}
+</code></pre>
+					</section>
+				</section>
+
+
+			<section>
+				<section>
+					<h2>jQuery</h2>
+					<p>
+						<small style="line-height: 1.8em;"><i>
+						jQuery is a <span class="highlight">fast, small, and feature-rich</span> JavaScript library.
+						It makes things like HTML <span class="highlight">document traversal and manipulation, event handling, animation, and Ajax</span> much simpler with an easy-to-use API that works across a multitude of browsers. With a combination of versatility and extensibility, jQuery has changed the way that millions of people write JavaScript.
+						</i></small>
+					</p>
+
+					<p>
+						Signe distinctif: <tt>$</tt> <br>
+						Exemple: <tt>$(MAGIC)</tt>
+					</p>
+				</section>
+
+				<section>
+					<h2>jQuery: Utilisation typique</h2>
+					<ol>
+						<li>On sélectionne des éléments du html</li>
+						<li>On applique une action dessus</li>
+					</ol>
+					<p>
+						<img style="width: 50%;" src="images/html_example.png">
+					</p>
+				</section>
+
+				<section>
+					<h2>jQuery: les sélecteurs</h2>
+					<p>= ce qui permet de <span class="important">sélectionner</span> des éléments du html</p>
+					<ul>
+						<li>Sélectionner <imp>par la balise html</imp>: <tt>$("h2")</tt></li>
+						<li>Sélectionner <imp>par id</imp>: <tt>$("#topic")</tt></li>
+						<li>Sélectionner <imp>par la classe css</imp>: <tt>$(".section")</tt></li>
+						<li><imp>Combinable</imp>: <tt>$("div.section")</tt></li>
+					</ul>
+					<h4 style="margin-top:1em;">Notez</h4>
+					<p>
+						Les sélecteurs jQuery sont d'une puissance surprenante
+					</p>
+				</section>
+
+				<section>
+					<h2>jQuery: les méthodes</h2>
+					<div>
+						Plein de méthodes qu'on peut appliquer au résultat d'un sélecteur
+					</div>
+					<div style="padding-top:1em;">
+
+						<div class="block">
+							<h1>Evenements</h1>
+								<tt>.click(), .dblclick(), .blur(), .focus(), .hover()</tt>
+						</div>
+
+						<div class="block">
+							<h1>Effets</h1>
+								<tt>.hide(), .show(), .fadeIn(), .fadeOut()</tt>
+						</div>
+
+						<div class="block">
+							<h1>Manipulations</h1>
+								<tt>.html(), .append(), .addClass(), .removeClass()</tt>
+						</div>
+
+					</div>
+				</section>
+
+				<section>
+					<h4>Exemplifions</h4>
+					<div style="margin:0;">
+						<img style="width: 50%;" src="images/html_example.png">
+					</div>
+					<pre style="margin-top: 0;"><code class="javascript" data-trim contenteditable style="font-size: 18px;">
+$("h2").hide();
+$(".section").click(function() {
+	$(".important").css("color", "red");
+});
+</code></pre>
+				</section>
+			</section>
+
+			<section>
+				<section>
+					<h2>Exercices</h2>
+					<h4>(Première vague)</h4>
+					<p>
+						Allez sur cette présentation, et déplacez-vous sur cette page <br>
+						<a class="bigger" href="http://">http://</a>
+					</p>
+				</section>
+
+				<section>
+					<h2>Exercice 1</h2>
+					<p>En cliquant sur "texte caché", ce dernier est remplacé par un autre texte.</p>
+					<p>
+						<div style="border: 1px solid blue; padding: 16px;">
+					    <span onclick="exerc1_action()" id="exercice1-el-visible" style="cursor:pointer;">Texte caché</span>
+					    <span style="display:none;" id="exercice1-el-non-visible">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</span>
+							<script language="javascript">
+							function exerc1_action() {
+										$(this).hide();
+										$("#exercice1-el-non-visible").show()
+							}
+							</script>
+						</div>
+					</p>
+					<p>
+						<a href="http://jsfiddle.net/reyesr/bu3grfxk/">http://jsfiddle.net/reyesr/bu3grfxk/</a>
+					</p>
+				</section>
+
+				<section>
+					<h2>Exercice 2</h2>
+					<p>Ecrire un convertisseur euros &rarr; francs</p>
+					<p>
+						<div style="border: 1px solid blue; padding: 16px;">
+							<input style="font-size: 32px; width: 3em;" type="number" id="exerc2_euros"> euros = <span id="exerc2_francs">x</span> francs français <br>
+							<button onclick="exerc2_action()" style="font-size: 32px; cursor:pointer;">convertir</button>
+							<script language="javascript">
+							function exerc2_action() {
+										$("#exerc2_francs").text($("#exerc2_euros").val() * 6.55957);
+							}
+							</script>
+						</div>
+					</p>
+					<p>
+						<a href="http://jsfiddle.net/reyesr/n1ce5vzd/">http://jsfiddle.net/reyesr/n1ce5vzd/</a>
+					</p>
+				</section>
+
+			</section>
+
+			<section>
+				<section>
+					<h2>Les animations</h2>
+					<p>jQuery propose quelques fonctions prédéfinies</p>
+					<div>
+						<div class="block ">
+							<h1 class="pointer" onclick="$(this).siblings().hide().fadeIn(1500);">fadeIn()</h1>
+							<div>
+								<img src="images/paloaltours_logo_144x144.png">
+							</div>
+						</div>
+
+						<div class="block">
+							<h1 class="pointer" onclick="$(this).siblings().show().fadeOut(1500);">fadeOut()</h1>
+							<div><img src="images/paloaltours_logo_144x144.png"></div>
+						</div>
+
+						<div class="block">
+							<h1 class="pointer" onclick="$(this).siblings().fadeToggle(1500);">fadeToggle()</h1>
+							<div><img src="images/paloaltours_logo_144x144.png"></div>
+						</div>
+
+						<div class="block">
+							<h1 class="pointer" onclick="$(this).siblings().hide().slideDown(1500);">slideDown()</h1>
+							<div><img src="images/paloaltours_logo_144x144.png"></div>
+						</div>
+
+						<div class="block">
+							<h1 class="pointer" onclick="$(this).siblings().show().slideUp(1500);">slideUp()</h1>
+							<div><img src="images/paloaltours_logo_144x144.png"></div>
+						</div>
+
+						<div class="block">
+							<h1 class="pointer" onclick="$(this).siblings().slideToggle(1500);">slideToggle()</h1>
+							<div><img src="images/paloaltours_logo_144x144.png"></div>
+						</div>
+
+					</div>
+				</section>
+
+				<section>
+					<h2>animate()</h2>
+				</section>
+
+			</section>
+
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
