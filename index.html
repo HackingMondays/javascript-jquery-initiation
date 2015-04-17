@@ -68,6 +68,32 @@
 			font-size: 1em;
 			margin: 0 0 8px 0;
 		}
+		.animation-container {
+			position: relative;
+			width: 100%;
+		}
+		.animated-block {
+			position: absolute;
+			left:0;
+			width: 10%;
+		}
+		.animated-block img {
+			width: 100%;
+			height: auto;
+		}
+		button {
+			padding: 0.5em;
+			background-color: #666699;
+			border:0;
+			font-size: 1em;
+			border-radius: 0.5em;
+		}
+		.green {
+			background-color: #4CAF50 !important;
+		}
+		.blue {
+			background-color: #3F51B5;
+		}
 		</style>
 
 		<script src="js/jquery-2.1.3.min.js"></script>
@@ -401,6 +427,69 @@ $(".section").click(function() {
 
 				<section>
 					<h2>animate()</h2>
+					<p>Faites vos propres animation avec animate.</p>
+					<p>Ne permet d'animer que des valeurs numériques.</p>
+					<pre style="margin-top: 0;"><code class="javascript" data-trim contenteditable style="font-size: 18px;">
+$('#paloaltours').animate({ width:'20%', left:'80%' }, 1500)
+					</code></pre>
+					<div class="animation-container">
+						<div class="animated-block" onclick="$(this).animate({ width:'20%', left:'80%' }, 1500)">
+							<img src="images/paloaltours_logo_144x144.png">
+						</div>
+					</div>
+				</section>
+
+				<section>
+					<h2>Enchainer les animation</h2>
+					<p>Il est possible de chaîner les animations.</p>
+					<pre style="margin-top: 0;"><code class="javascript" data-trim contenteditable style="font-size: 18px;">
+$('#paloaltours').animate({ width:'20%', left:'80%' }, 700)
+                 .animate({ width:'10%', left:'0' }, 700)
+                 .slideUp(700)
+                 .slideDown(700)
+					</code></pre>
+					<div class="animation-container">
+						<div class="animated-block" onclick="$(this).animate({ width:'20%', left:'80%' }, 700).animate({ width:'10%', left:'0' }, 700).slideUp(700).slideDown(700)">
+							<img src="images/paloaltours_logo_144x144.png">
+						</div>
+					</div>
+				</section>
+
+				<section>
+					<h2>Stoper une animation</h2>
+					<p>Il est possible de chaîner les animations.</p>
+					<pre style="margin-top: 0;"><code class="javascript" data-trim contenteditable style="font-size: 18px;">
+$('#paloaltours').stop(true)
+					</code></pre>
+					<button type="button" name="button" onclick="$('#stop-example').stop(true)">stop</button>
+					<div class="animation-container">
+						<div id="stop-example" class="animated-block" onclick="$(this).animate({ width:'20%', left:'80%' }, 700).animate({ width:'10%', left:'0' }, 700).slideUp(700).slideDown(700)">
+							<img src="images/paloaltours_logo_144x144.png">
+						</div>
+					</div>
+				</section>
+
+				<section>
+					<h2>Manipuler une class</h2>
+					<p>L'on peut ajouter ou enlever une class d'un élément.</p>
+					<pre style="margin-top: 0;"><code class="javascript" data-trim contenteditable style="font-size: 18px;">
+$('#paloaltours').addClass('blue')
+                 .removeClass('green')
+					</code></pre>
+					<div class="green" onclick="$(this).addClass('blue').removeClass('green')">
+						<h3>Example</h3>
+					</div>
+				</section>
+
+				<section>
+					<h2>Manipuler une class</h2>
+					<p>L'on peut ajouter ou enlever une class selon si elle est déjà présente ou non.</p>
+					<pre style="margin-top: 0;"><code class="javascript" data-trim contenteditable style="font-size: 18px;">
+$('#paloaltours').toggleClass('green')
+					</code></pre>
+					<div class="blue" onclick="$(this).toggleClass('green')">
+						<h3>Example</h3>
+					</div>
 				</section>
 
 			</section>
