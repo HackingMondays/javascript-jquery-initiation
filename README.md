@@ -2,7 +2,7 @@
 
 Cette présentation est proposée par l'association @PaloAltours et fournit une
 introduction basée sur des exercices, et destinée à celles et ceux qui ont
-déjà une connaissance des langages HTML et CSS, et souhaiterait ajouter
+déjà une connaissance des langages HTML et CSS, et souhaitent ajouter
 des éléments dynamiques à leurs pages.
 
 Il ne s'agit pas d'un cours théorique, ni d'une introduction formelle à
