@@ -386,6 +386,54 @@ $(".section").click(function() {
 			</section>
 
 			<section>
+
+				<section>
+					<h2>Le HTML complet</h2>
+					<div>
+						<img src="images/html-complet.png">
+					</div>
+				</section>
+
+				<section>
+					<h2>L'événement DOM Ready</h2>
+					<div>
+						<img src="images/html-complet-dom-ready.png">
+					</div>
+				</section>
+
+			</section>
+
+			<section>
+				<section>
+					<h2>Animations</h2>
+					<h3>Les préliminaires</h3>
+				</section>
+
+				<section>
+					<h2>Manipuler une class</h2>
+					<p>L'on peut ajouter ou enlever une class d'un élément.</p>
+					<pre style="margin-top: 0;"><code class="javascript" data-trim contenteditable style="font-size: 18px;">
+						$('#paloaltours').addClass('blue')
+						.removeClass('green')
+					</code></pre>
+					<div class="green" onclick="$(this).addClass('blue').removeClass('green')">
+						<h3>Example</h3>
+					</div>
+				</section>
+
+				<section>
+					<h2>Manipuler une class</h2>
+					<p>L'on peut ajouter ou enlever une class selon si elle est déjà présente ou non.</p>
+					<pre style="margin-top: 0;"><code class="javascript" data-trim contenteditable style="font-size: 18px;">
+						$('#paloaltours').toggleClass('green')
+					</code></pre>
+					<div class="blue" onclick="$(this).toggleClass('green')">
+						<h3>Example</h3>
+					</div>
+				</section>
+			</section>
+
+			<section>
 				<section>
 					<h2>Les animations</h2>
 					<p>jQuery propose quelques fonctions prédéfinies</p>
@@ -469,29 +517,6 @@ $('#paloaltours').stop(true)
 					</div>
 				</section>
 
-				<section>
-					<h2>Manipuler une class</h2>
-					<p>L'on peut ajouter ou enlever une class d'un élément.</p>
-					<pre style="margin-top: 0;"><code class="javascript" data-trim contenteditable style="font-size: 18px;">
-$('#paloaltours').addClass('blue')
-                 .removeClass('green')
-					</code></pre>
-					<div class="green" onclick="$(this).addClass('blue').removeClass('green')">
-						<h3>Example</h3>
-					</div>
-				</section>
-
-				<section>
-					<h2>Manipuler une class</h2>
-					<p>L'on peut ajouter ou enlever une class selon si elle est déjà présente ou non.</p>
-					<pre style="margin-top: 0;"><code class="javascript" data-trim contenteditable style="font-size: 18px;">
-$('#paloaltours').toggleClass('green')
-					</code></pre>
-					<div class="blue" onclick="$(this).toggleClass('green')">
-						<h3>Example</h3>
-					</div>
-				</section>
-
 			</section>
 			<section>
 				<section>
@@ -505,14 +530,48 @@ $('#paloaltours').toggleClass('green')
 					<a href="https://jsfiddle.net/nz8u72aw/">https://jsfiddle.net/nz8u72aw/</a>
 				</section>
 				<section>
-					<h2>Exercice 3</h2>
-					<p>Un bouton animé avec .animate()</p>
-					<a href="https://jsfiddle.net/teuyy1dL/">https://jsfiddle.net/teuyy1dL/</a>
-				</section>
-				<section>
 					<h2>Bonus</h2>
 					<a href="https://jsfiddle.net/5y4277c7/">https://jsfiddle.net/5y4277c7/</a>
 				</section>
+			</section>
+
+			<section>
+				<section>
+					<h2>Les plugins jQuery</h2>
+					<h3>Le principe</h3>
+					<p>
+						<ul>
+							<li>On charge un script de plugin</li>
+							<li>(optionnel) un fichier css</li>
+							<li>Magie: une nouvelle méthode jquery est disponible</li>
+						</ul>
+					</p>
+				</section>
+
+				<section>
+					<h2>plugins jQuery (2)</h2>
+				</section>
+			</section>
+
+			<section>
+
+				<section>
+					<h2>Exercices</h2>
+				</section>
+
+				<section>
+					<h2>Exercice ...</h2>
+					<h4>jQuery.Color</h4>
+					<p>Reproduire l'animation Windows 8 avec .animate()</p>
+					<a href="https://jsfiddle.net/teuyy1dL/">https://jsfiddle.net/teuyy1dL/</a>
+				</section>
+				<section>
+					<h2>Exercice ...</h2>
+					<h4>Formulaires</h4>
+					<p>Utiliser un plugin jQuery pour gérer ses formulaires</p>
+					<a href="https://jsfiddle.net/teuyy1dL/">https://jsfiddle.net/teuyy1dL/</a>
+				</section>
+
 			</section>
 
 			</div>
