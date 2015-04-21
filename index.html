@@ -574,7 +574,36 @@ $('#paloaltours').stop(true)
 				</section>
 
 				<section>
-					<h2>plugins jQuery (2)</h2>
+					<h2>plugin jQuery : Color</h2>
+					<p>Url : <a href="https://github.com/jquery/jquery-color/">https://github.com/jquery/jquery-color/</a></p>
+					<p>Permet de d'animer les changement de couleurs.</p>
+					<p>Ajoute à .animate() la possibilité d'animer sur background-color et color</p>
+				</section>
+
+				<section>
+					<h2>plugin jQuery : Validate</h2>
+					<p>Permet de valider un formulaire et d'afficher des messages en conséquence. Url : <a href="http://jqueryvalidation.org/">http://jqueryvalidation.org/</a>Exemple :</p>
+<pre style="margin-top: 0;"><code class="html" data-trim contenteditable style="font-size: 18px; line-height: normal">
+&lt;form id=&quot;login&quot;&gt;
+  &lt;label for=&quot;email&quot;&gt;Email:&lt;/label&gt;&lt;input type=&quot;text&quot; name=&quot;email&quot;&gt;
+  &lt;label for=&quot;password&quot;&gt;Password:&lt;/label&gt;&lt;input type=&quot;password&quot; name=&quot;password&quot;&gt;
+&lt;/form&gt;
+&lt;script type=&quot;text/javascript&quot;&gt;
+  $('#login').validate({
+    rules: {
+      email: { required: true, email: true },
+      password: { required: true }
+    },
+    messages: {
+      email: 'Vous devez entrer un email valide.',
+      password: 'Vous devez entrer un mot de passe'
+    },
+    submitHandler: function(form) {
+      // Faire des choses une fois le formulaire valide
+    }
+  })
+&lt;/script&gt;
+</code></pre>
 				</section>
 			</section>
 
@@ -588,13 +617,13 @@ $('#paloaltours').stop(true)
 					<h2>Exercice ...</h2>
 					<h4>jQuery.Color</h4>
 					<p>Reproduire l'animation Windows 8 avec .animate()</p>
-					<a target="_blank"  href="https://jsfiddle.net/teuyy1dL/">https://jsfiddle.net/teuyy1dL/</a>
+					<a target="_blank"  href="https://jsfiddle.net/o3p91hhs/">https://jsfiddle.net/teuyy1dL/</a>
 				</section>
 				<section>
 					<h2>Exercice ...</h2>
 					<h4>Formulaires</h4>
 					<p>Utiliser un plugin jQuery pour gérer ses formulaires</p>
-					<a target="_blank" href="https://jsfiddle.net/teuyy1dL/">https://jsfiddle.net/teuyy1dL/</a>
+					<a target="_blank" href="https://jsfiddle.net/bmstzttL/">https://jsfiddle.net/teuyy1dL/</a>
 				</section>
 
 				<section>
